@@ -5,23 +5,25 @@
 ![HuggingFace](https://img.shields.io/badge/Transformers-🤗-yellow)
 ![Colab](https://img.shields.io/badge/Run%20on-Colab-orange?logo=googlecolab)
 
+---
+
 ## 📌 Project Overview
 This project analyzes **customer reviews from Shopee** and classifies them into **positive, neutral, and negative sentiments**.  
-We use **Natural Language Processing (NLP)** with a Transformer model (**IndoBERT**) to extract insights about customer satisfaction.
+We use **Natural Language Processing (NLP)** with a Transformer model (**IndoBERT**) to extract insights about customer satisfaction and provide actionable recommendations for improvement.
 
 ---
 
 ## 🎯 Objectives
-- Classify Shopee reviews into **positive**, **neutral**, and **negative**.
-- Identify main drivers of satisfaction and dissatisfaction.
-- Provide actionable recommendations for sellers and the platform.
+- Classify Shopee reviews into **positive**, **neutral**, and **negative** categories.  
+- Identify the main drivers of customer satisfaction and dissatisfaction.  
+- Provide insights and recommendations for sellers and the platform.  
 
 ---
 
 ## 📊 Dataset
-- **Source:** Shopee_Sampled_Reviews.csv  
+- **Source:** Shopee_Sampled_Reviews.csv (provided dataset)  
 - **Size:** 2,500 reviews  
-- **Columns:**  
+- **Columns Used:**  
   - `content` → review text  
   - `score` → rating (1–5)  
 
@@ -36,42 +38,47 @@ We use **Natural Language Processing (NLP)** with a Transformer model (**IndoBER
 - [Google Colab](https://colab.research.google.com/)  
 - [Transformers (HuggingFace)](https://huggingface.co/transformers/)  
 - IndoBERT (`indobenchmark/indobert-base-p1`)  
-- scikit-learn for metrics  
+- scikit-learn for metrics & evaluation  
 - matplotlib & seaborn for visualization  
 
 ---
 
 ## 🔍 Analysis Process
-1. Load dataset & preprocess (extract `content` & `score`)  
-2. Map review scores → sentiment labels  
-3. Split dataset (80% train, 20% test)  
-4. Tokenize text with IndoBERT tokenizer  
-5. Train IndoBERT for sentiment classification  
-6. Evaluate model with classification report & confusion matrix  
-7. Visualize sentiment distribution & performance  
+1. Load dataset & preprocess (extract `content` & `score`).  
+2. Map review scores → sentiment labels.  
+3. Split dataset (80% training, 20% testing).  
+4. Tokenize text with IndoBERT tokenizer.  
+5. Train IndoBERT for sentiment classification.  
+6. Evaluate model with classification report & confusion matrix.  
+7. Visualize sentiment distribution & performance.  
 
 ---
 
 ## 📈 Results & Findings
 
-### Sentiment Distribution
-![Sentiment Distribution](results/sentiment_distribution.png)
-
 ### Confusion Matrix
+The model performs well in classifying **Positive** and **Negative** reviews, but struggles with **Neutral** reviews.
+
 ![Confusion Matrix](results/confusion_matrix.png)
 
-- Majority reviews are **positive**.  
-- Negative reviews highlight issues like *slow delivery* and *app performance*.  
-- Positive reviews mention *fast delivery*, *good packaging*, and *affordable prices*.  
+---
+
+## ✅ Insights
+- **Positive Reviews:** highlight *fast delivery*, *good packaging*, and *affordable prices*.  
+- **Negative Reviews:** mention *slow delivery*, *app performance issues*, and *product mismatch*.  
+- **Neutral Reviews:** often ambiguous and harder to classify (model misclassifies many neutral reviews).  
 
 ---
 
-## ✅ Conclusion & Recommendations
-- Sellers should improve **delivery time & product quality**.  
-- Maintain positive aspects such as **packaging & pricing**.  
-- Shopee could optimize **app performance** for better experience.  
+## 🎯 Conclusion & Recommendations
+- Sellers should improve **delivery time** and **product quality consistency**.  
+- Shopee should maintain strengths in **pricing & packaging quality**.  
+- Future improvement: handle **neutral reviews** more effectively, possibly by adding more training data or using advanced sentiment techniques.  
 
 ---
+
+## 📂 Repository Structure
+
 
 ## 🚀 How to Run
 1. Clone repo:
