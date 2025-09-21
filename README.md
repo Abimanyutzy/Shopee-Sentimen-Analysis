@@ -59,7 +59,7 @@ We use **Natural Language Processing (NLP)** with a Transformer model (**IndoBER
 ### Confusion Matrix
 The model performs well in classifying **Positive** and **Negative** reviews, but struggles with **Neutral** reviews.
 
-![Confusion Matrix](results/confusion_matrix.png)
+![[Confusion Matrix](results/confusion_matrix.png)](https://github.com/Abimanyutzy/Shopee-Sentimen-Analysis/blob/main/Results/Confussion%20Matrix.png)
 
 ---
 
